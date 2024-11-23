@@ -26,7 +26,7 @@
           name))
 
 (defun test-sorting-functions ()
-  ;Звичайні тести
+  
   (check-sort "Functional test 1" '(3 1 2) '(1 2 3))
   
   (check-sort "Functional test 2" '(5 3 1 4 2 1) '(1 1 2 3 4 5))
