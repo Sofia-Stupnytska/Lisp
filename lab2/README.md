@@ -36,12 +36,12 @@ T
 ```lisp
 (defun merge-lists-spinning-pairs (a b)
   (cond
-    ((and (null a) (null b)) nil)
-    ((and (not (null a)) (null b))
-     (cons (list (car a)) (merge-lists-spinning-pairs (cdr a) b)))
-    ((and (null a) (not (null b)))
-     (cons (list (car b)) (merge-lists-spinning-pairs a (cdr b))))
-    (t (cons (list (car a) (car b)) (merge-lists-spinning-pairs (cdr b) (cdr a))))))
+    ((null a) 
+     (if (null b) nil (cons (list (car b)) (merge-lists-spinning-pairs nil (cdr b)))))
+    ((null b) 
+     (cons (list (car a)) (merge-lists-spinning-pairs (cdr a) nil)))
+    (t 
+     (cons (list (car a) (car b)) (merge-lists-spinning-pairs (cdr b) (cdr a))))))
 ```
 ### Тестові набори
 ```lisp
@@ -76,7 +76,7 @@ passed... Task 1 Test 5
 
 (defun find-in-list (x lst)
   (cond ((null lst) nil)
-        ((equal x (car lst)) t)
+        ((eq x (car lst)) t)
         (t (find-in-list x (cdr lst)))))
 ```
 ### Тестові набори
