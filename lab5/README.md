@@ -24,7 +24,7 @@
 6. Написати функцію(-ї) для "красивого" виводу записів таблиці.
    
 ## Варіант 9
-База даних: Наукові статті
+База даних: Наукові статті  
 Тип записів: Асоціативний список
 ## Лістинг реалізації завдання
 ```lisp
@@ -247,11 +247,8 @@ Specialty       F2
 Data where :specialty is 'F7' has been written to specialty_F7.csv
 ```
 ## Результат записання в specialty_F7.csv файл:
-Id	Article	Specialty
-5	Article5	F7
-6	Article6	F7
-7	Article7	F7
-8	Article8	F7
-
-
-
+Id	Article	Specialty  
+5	Article5	F7  
+6	Article6	F7  
+7	Article7	F7  
+8	Article8	F7  
